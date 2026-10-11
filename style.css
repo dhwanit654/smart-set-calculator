@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1020;
+    color: #f1f5f9;
+    min-height: 100vh;
+    padding: 24px 14px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.tag {
+    color: #60a5fa;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    margin-bottom: 10px;
+}
+
+header p:last-child,
+.diagram-card>p {
+    color: #aab6cc;
+    line-height: 1.6;
+}
+
+.input-card,
+.result-card,
+.diagram-card {
+    background: #151d31;
+    border: 1px solid #293650;
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 12px 0 8px;
+    color: #bfdbfe;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    background: #0b1020;
+    border: 1px solid #394967;
+    border-radius: 9px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #60a5fa;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 9px;
+    background: #3978e8;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #5b95ff;
+    transform: translateY(-1px);
+}
+
+.sample {
+    background: #16866b;
+    margin-top: 16px;
+    margin-right: 8px;
+}
+
+.reset {
+    background: #475569;
+    margin-top: 16px;
+}
+
+h2 {
+    margin-bottom: 14px;
+    color: #bfdbfe;
+}
+
+h3 {
+    margin: 20px 0 10px;
+}
+
+#result {
+    padding: 16px;
+    background: #0b1020;
+    border-radius: 10px;
+    color: #86efac;
+    font-size: 19px;
+    overflow-wrap: anywhere;
+}
+
+#setDisplay,
+#explanation {
+    color: #cbd5e1;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+#explanation {
+    margin-top: 12px;
+}
+
+.diagram-card {
+    text-align: center;
+}
+
+#venn {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 12px auto 0;
+}
+
+.set-label {
+    fill: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+.elements {
+    fill: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+    line-height: 1.8;
+    padding: 10px;
+}
+
+@media (max-width: 500px) {
+
+    .input-card,
+    .result-card,
+    .diagram-card {
+        padding: 16px;
+    }
+
+    .actions button {
+        flex: 1 1 100%;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Set Operations Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <p class="tag">MFCA INNOVATIVE ASSIGNMENT</p>
+            <h1>Smart Set Calculator</h1>
+            <p>Explore mathematical set operations interactively.</p>
+        </header>
+
+        <section class="input-card">
+            <label for="setA">Set A</label>
+            <input id="setA" type="text" placeholder="e.g. 1, 2, 3, 4">
+
+            <label for="setB">Set B</label>
+            <input id="setB" type="text" placeholder="e.g. 3, 4, 5, 6">
+
+            <div class="actions">
+                <button onclick="calculate('union')">Union A ∪ B</button>
+                <button onclick="calculate('intersection')">Intersection A ∩ B</button>
+                <button onclick="calculate('difference')">A − B</button>
+                <button onclick="calculate('reverse')">B − A</button>
+                <button onclick="calculate('symmetric')">Symmetric Difference</button>
+            </div>
+
+            <button class="sample" onclick="loadSample()">Load Sample Sets</button>
+            <button class="reset" onclick="resetAll()">Reset</button>
+        </section>
+
+        <section class="result-card">
+            <h2>Set Results</h2>
+            <p id="setDisplay">Set A and Set B will appear here.</p>
+            <h3 id="operationTitle">Choose an operation</h3>
+            <p id="result">{ }</p>
+            <p id="explanation">Your result and explanation will appear here.</p>
+        </section>
+
+        <section class="diagram-card">
+            <h2>Venn Diagram</h2>
+            <p>Common elements are shown in the overlapping region.</p>
+            <svg id="venn" viewBox="0 0 340 220" role="img" aria-label="Venn diagram of Set A and Set B">
+                <circle cx="125" cy="110" r="70" fill="#5b8def" fill-opacity="0.65" stroke="#5b8def" stroke-width="2" />
+                <circle cx="215" cy="110" r="70" fill="#a78bfa" fill-opacity="0.65" stroke="#a78bfa" stroke-width="2" />
+                <text x="90" y="40" class="set-label">A</text>
+                <text x="250" y="40" class="set-label">B</text>
+                <text id="vennA" x="100" y="115" class="elements">—</text>
+                <text id="vennCommon" x="170" y="115" class="elements">—</text>
+                <text id="vennB" x="240" y="115" class="elements">—</text>
+            </svg>
+        </section>
+
+        <footer>
+            <p>Mathematical Foundation of Computer Application</p>
+            <p>Created by: YOUR NAME | Semester 1</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
